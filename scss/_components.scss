@@ -1,0 +1,15 @@
+@mixin horizontal-line {
+  position: relative;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 2em;
+    border-bottom: thin solid rgb(174, 170, 170);
+  }
+}

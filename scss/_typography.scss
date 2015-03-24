@@ -5,6 +5,20 @@ h4,
 h5,
 h6 {
   font-family: $font-family-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.4rem;
   font-variant: small-caps;
   letter-spacing: 0.02em;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: 2.8rem;
+}
+
+body {
+  font-size: 1.6rem;
 }
