@@ -452,17 +452,17 @@ label > .label-body {
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 ul {
-  list-style: circle inside;
+  list-style: circle;
 }
 
 ol {
-  list-style: decimal inside;
-  padding-left: 0;
+  list-style: decimal;
+  padding-left: 1em;
   margin-top: 0;
 }
 
 ul {
-  padding-left: 0;
+  padding-left: 1em;
   margin-top: 0;
   ul, ol {
     margin: 1.5rem 0 1.5rem 3rem;
