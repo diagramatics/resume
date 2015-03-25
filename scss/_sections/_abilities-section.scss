@@ -1,0 +1,14 @@
+.abilities-section {
+  > .title {}
+
+  > .list {
+    columns: 350px 2;
+    column-gap: 1.5em;
+    padding-left: 0;
+    list-style: circle inside;
+  }
+  
+  > .extra {
+    font-style: italic;
+  }
+}

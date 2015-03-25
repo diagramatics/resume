@@ -1,0 +1,15 @@
+.contact-row {
+  text-align: center;
+
+  > .text {
+    display: inline-block;
+    margin: .5em 1em 1.33em;
+    letter-spacing: 0.0625em;
+    text-size: 1.6rem;
+  }
+
+  > .text a {
+    color: currentColor;
+    text-decoration: none;
+  }
+}
