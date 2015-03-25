@@ -1,10 +1,6 @@
 .resume-section {
   @include horizontal-line;
 
-  &:last-of-type:before {
-    display: none;
-  }
-
   > .title {
     padding-top: 1em;
   }
