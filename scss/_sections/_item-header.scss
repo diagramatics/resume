@@ -1,0 +1,45 @@
+.item-header {
+  margin: .6em 0 1.5em;
+
+  > .main {}
+  > .side {
+    font-family: $font-family-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  // Enable grid on bigger sizes than tablet
+  @media (#{$bp-larger-than-phablet}) {
+    > .main {
+      width: grid-column-width(9);
+    }
+    > .side {
+      width: grid-column-width(3);
+      font-size: 2.4rem;
+      text-align: right;
+      margin-left: 2em;
+    }
+  }
+  @media (#{$bp-larger-than-phablet}), only print {
+    // Use Modernizr CSS class toggles to detect flexbox support
+    .flexbox & {
+      display: flex;
+
+      > .main {
+        flex: 2;
+        width: auto; // Override to enable flexbox properly
+      }
+
+      > .side {
+        width: auto; // Override to enable flexbox properly
+        margin-left: 1em;
+      }
+    }
+  }
+
+  @media (#{$bp-larger-than-tablet}), only print {
+    > .side {
+      font-size: 2.8rem;
+    }
+  }
+}

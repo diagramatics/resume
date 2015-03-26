@@ -1,7 +1,5 @@
 .resume-section {
   @include horizontal-line;
-
-  > .title {
-    padding-top: 1em;
-  }
+  // Prevent page breaks between contents of the section
+  page-break-inside: avoid;
 }

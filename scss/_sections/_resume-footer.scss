@@ -1,12 +1,14 @@
 .resume-footer {
-  margin: 5em 0 2.5em;
-  color: #999;
+  margin: 2em 0 2.5em;
+  opacity: .8;
+  font-size: .8em; // Using em so footer is a fraction of the global font size
   text-align: center;
+  // Prevent page breaks on the footer content
+  page-break-inside: avoid;
 
   &:hover {
-    color: black;  
+    opacity: 1;
   }
-
 
   > .title {
     font-style: italic;
@@ -22,9 +24,15 @@
   }
 
   > .icons svg {
-    width: 28px;
-    height: 28px;
+    width: 1.8em; // Using em so it would be relative to the footer font size
+    height: 1.8em; // Using em so it would be relative to the footer font size
     margin: 1em .2em .2em;
     fill: currentColor;
+  }
+
+
+  @include print {
+    margin-bottom: 0;
+    opacity: 1;
   }
 }

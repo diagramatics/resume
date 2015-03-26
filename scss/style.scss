@@ -1,9 +1,12 @@
 @charset 'UTF-8';
 
 @import "variables";
+@import "components";
+@import "media-queries";
 @import "skeleton";
 @import "core";
 @import "typography";
-@import "components";
 
 @import "_sections/sections";
+
+@import "print-page";

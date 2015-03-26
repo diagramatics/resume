@@ -3,3 +3,10 @@
 *:after {
   box-sizing: border-box;
 }
+
+.container {
+  @include print {
+    width: 100%;
+    padding: 0;
+  }
+}

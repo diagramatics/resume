@@ -2,12 +2,30 @@
   > .title {}
 
   > .list {
-    columns: 350px 2;
-    column-gap: 1.5em;
+    columns: $abilities-column-width $abilities-column-count;
+    column-gap: $abilities-column-gap;
     padding-left: 0;
-    list-style: circle inside;
+    list-style: circle inside; // Has to be not "inside" but using CSS columns with it doesn't work so yeah
+
+    @include print {
+      // TODO: After Chrome fixes the print column bug, remove this I guess
+      columns: auto;
+    }
   }
-  
+
+  > .list > li {
+    @media only print {
+      // TODO: After Chrome fixes the print column bug, remove this I guess
+      float: left;
+      width: 50%;
+      padding-right: .75cm;
+      &:nth-of-type(2n) {
+        padding-right: 0;
+        padding-left: .75cm;
+      }
+    }
+  }
+
   > .extra {
     font-style: italic;
   }

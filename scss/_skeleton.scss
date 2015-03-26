@@ -41,8 +41,8 @@ $dark-grey: #333 !default;
 $primary-color: #33c3f0 !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
-$link-color: #1eaedb !default;
 $font-color: #222 !default;
+$link-color: lighten($font-color, 15%) !default;
 
 // Typography
 $font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;

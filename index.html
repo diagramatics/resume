@@ -23,7 +23,11 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+  <!-- Normally we put favicon for Apple and Windows tiles too, but since the
+       resume is not a webapp, don't then -->
 
 </head>
 <body>
@@ -50,7 +54,7 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <header class="header-section resume-section container">
+  <header class="resume-header container">
     <h1 class="title">Steven Sinatra</h1>
     <div class="contact-row row">
       <div class="text"><a href="tel:+61416640528" title="Phone Number">+61 416 640 528</a></div>
@@ -66,38 +70,34 @@
       <li>JavaScript, jQuery and CoffeeScript</li>
       <li>UX/UI research understanding at a junior level</li>
       <li>Working knowledge of SQL and PHP</li>
-      <li>Front-end workflow tools (Grunt, Gulp, Bower, Yeoman)</li>
+      <li>Front-end workflow tools (Grunt, Gulp, Vagrant)</li>
       <li>Adobe Photoshop and Illustrator</li>
-      <li>Git, GitHub, Bitbucket and SourceTree</li>
+      <li>Git, GitHub, and Bitbucket</li>
     </ul>
-    <p class="extra">Also currently sharpening up on Angular, Ember, Laravel, Polymer, Foundation by Zurb, and Android development.</p>
+    <p class="extra">Also currently sharpening up on Angular, Polymer, and Android development.</p>
   </section>
 
   <section class="experience-section resume-section container">
     <h2 class="title">Experience</h2>
     <div class="experience-item">
-      <div class="header row">
-        <div class="nine columns">
+      <div class="item-header row">
+        <div class="main">
           <h3 class="company">Lightdiv Designs</h3>
           <p class="position">Lead Front-end Web Developer</p>
         </div>
-        <div class="three columns">
-          <div class="period">2013 — 2014</div>
-        </div>
+        <div class="side">2013 — 2014</div>
       </div>
       <ul class="achievements">
         <li>Managed the website look and the user interaction of one of the clients, a popular local newspaper company’s online website. Given a fresher and a more novel look.</li>
       </ul>
     </div>
     <div class="experience-item">
-      <div class="header row">
-        <div class="nine columns">
+      <div class="item-header row">
+        <div class="main">
           <h3 class="company">HeartIndo</h3>
           <p class="position">Internship on Web Design and Content Writing</p>
         </div>
-        <div class="three columns">
-          <div class="period">2012</div>
-        </div>
+        <div class="side">2012</div>
       </div>
       <ul class="achievements">
         <li>Created a new look of <a href="http://www.heartindo.com">the website</a> by using the limited features in Google Sites in the timespan of two weeks. Current website look may have been altered.</li>
@@ -107,34 +107,29 @@
   </section>
 
   <section class="projects-section resume-section container">
-    <h2 class="title">Projects</h2>
+    <h2 class="title">Projects & Other Involvement</h2>
 
     <div class="projects-item">
-      <h3 class="title">PSSI – Indonesian Football Association Concept</h3>
-      <a href="http://projects.diagramatics.me/pssi/" class="link">http://projects.diagramatics.me/pssi/</a>
-      <p class="details">A concept from <a href="http://majuter.us">Leo Ari Wibowo</a>, sliced from a Photoshop Document. Unfinished with the lack of support from the original creator.</p>
+      <h3 class="title">io.js Indonesian Localization Team Member</h3>
+      <a href="http://github.com/iojs/iojs-id" class="link">http://github.com/iojs/iojs-id</a>
+      <p class="details">Pushed and maintained a majority of the <a href="https://medium.com/@iojs_id" title="iojs_id Medium Account">weekly updates</a> as well as involved in the translation of the evangelism items and the <a href="https://iojs.org/id/index.html" title="The Indonesian version of iojs.org">main website</a>.</p>
     </div>
     <div class="projects-item">
-      <h3 class="title">Coffee and Cake</h3>
-      <a href="http://projects.diagramatics.me/cnc/" class="link">http://projects.diagramatics.me/cnc/</a>
-      <p class="details">Designed and coded for a part of the web design class, with the whole idea of showcasing animations as a part of the web.</p>
-    </div>
-    <div class="projects-item">
-      <h3 class="title">Portfolio Site Concept</h3>
-      <a href="http://projects.diagramatics.me/dgr-v2/" class="link">http://projects.diagramatics.me/dgr-v2/</a>
-      <p class="details">Created for a part of a web design class, trying to recreate a newer, cleaner version of the way older portfolio site with the use of the newest technologies of the web.</p>
+      <h3 class="title">Shelves</h3>
+      <a href="http://github.com/diagramatics/shelves" class="link">http://github.com/diagramatics/shelves</a>
+      <p class="details">A college assignment submission, designed and developed an e-commerce website using PHP and with no other major frameworks other than jQuery. Incorporated Sass for better CSS, JavaScript object-oriented declarations and Vagrant for development environment use.</p>
     </div>
 
-    <p class="details">There are more unreleased projects I’m willing to show and some smaller projects in my <a href="http://github.com/diagramatics">GitHub</a> and <a href="http://codepen.io/diagramatics">CodePen</a> account.</p>
+    <p class="details">More projects and experiments can be found over my <a href="http://github.com/diagramatics">GitHub</a> and <a href="http://codepen.io/diagramatics">CodePen</a> account.</p>
   </section>
 
   <section class="education-section resume-section container">
     <h2 class="title">Education</h2>
 
     <div class="education-item">
-      <div class="header row">
-        <h3 class="provider nine columns">Academy of Information Technology</h3>
-        <div class="period three columns">2013 — 2016</div>
+      <div class="item-header row">
+        <h3 class="main">Academy of Information Technology</h3>
+        <div class="side"></div>
       </div>
       <ul>
         <li>
@@ -177,5 +172,9 @@
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
 </body>
 </html>
