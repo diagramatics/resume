@@ -1,6 +1,6 @@
 @mixin horizontal-line {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 1.5em;
 
   &:before {
     content: "";
@@ -11,4 +11,8 @@
     margin: 0 2em;
     border-bottom: thin solid rgb(174, 170, 170);
   }
+}
+
+@mixin default-transition {
+  transition: all .2s cubic-bezier(.4,0,.2,1);
 }

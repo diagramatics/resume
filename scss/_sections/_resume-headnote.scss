@@ -1,0 +1,10 @@
+.resume-headnote {
+  display: none;
+  font-size: 1.0rem;
+  text-align: center;
+  opacity: .3;
+
+  @include print {
+    display: block;
+  }
+}

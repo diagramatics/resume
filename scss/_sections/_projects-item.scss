@@ -1,8 +1,12 @@
 .projects-item {
-  > .title {}
-  > .link {
-    display: inline-block;
-    margin-bottom: 1.5em;
+  > .item-header .title {
+    font-size: 2.4rem;
+  }
+  > .item-header .link {
     font-style: italic;
+    font-size: 1.4rem;
+  }
+  > .item-header .side {
+    font-size: 2.4rem;
   }
 }

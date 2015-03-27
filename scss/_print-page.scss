@@ -1,6 +1,6 @@
 @page {
   size: auto;
-  margin: .63in .78in ; // TODO: No idea why this isn't working
+  margin: .53in .63in ; // Have to be inches, otherwise not working
 }
 
 @include print {

@@ -35,6 +35,8 @@ p {
 }
 
 a {
+  @include default-transition;
+  
   &:hover {
     color: darken($font-color, 10%);
   }

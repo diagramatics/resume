@@ -1,5 +1,17 @@
 .resume-section {
   @include horizontal-line;
-  // Prevent page breaks between contents of the section
   page-break-inside: avoid;
+
+  > .title {
+    page-break-after: avoid;
+  }
+
+  > .item,
+  > .extra {
+    page-break-inside: avoid;
+  }
+
+  > .extra {
+    page-break-before: avoid;
+  }
 }

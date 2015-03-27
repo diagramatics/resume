@@ -6,7 +6,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Steven Sinatra — Résumé</title>
-  <meta name="description" content="A resume of Steven Sinatra, a front-end web developer from Indonesia.">
+  <meta name="description" content="A résumé of Steven Sinatra, a front-end web developer from Indonesia.">
   <meta name="author" content="Steven Sinatra">
 
   <!-- Mobile Specific Metas
@@ -15,7 +15,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='//fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|Noto+Sans:400,400i' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|Noto+Sans:400,400i' rel='stylesheet' type='text/css'>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -53,7 +53,8 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
+  <div class="resume-headnote">
+    This résumé is made from a live website. You can find it at <a href="http://cv.diagramatics.me" title="Steven Sinatra's live Website CV">cv.diagramatics.me</a></div>
   <header class="resume-header container">
     <h1 class="title">Steven Sinatra</h1>
     <div class="contact-row row">
@@ -79,7 +80,7 @@
 
   <section class="experience-section resume-section container">
     <h2 class="title">Experience</h2>
-    <div class="experience-item">
+    <div class="item experience-item">
       <div class="item-header row">
         <div class="main">
           <h3 class="company">Lightdiv Designs</h3>
@@ -91,7 +92,7 @@
         <li>Managed the website look and the user interaction of one of the clients, a popular local newspaper company’s online website. Given a fresher and a more novel look.</li>
       </ul>
     </div>
-    <div class="experience-item">
+    <div class="item experience-item">
       <div class="item-header row">
         <div class="main">
           <h3 class="company">HeartIndo</h3>
@@ -109,24 +110,47 @@
   <section class="projects-section resume-section container">
     <h2 class="title">Projects & Other Involvement</h2>
 
-    <div class="projects-item">
-      <h3 class="title">io.js Indonesian Localization Team Member</h3>
-      <a href="http://github.com/iojs/iojs-id" class="link">http://github.com/iojs/iojs-id</a>
-      <p class="details">Pushed and maintained a majority of the <a href="https://medium.com/@iojs_id" title="iojs_id Medium Account">weekly updates</a> as well as involved in the translation of the evangelism items and the <a href="https://iojs.org/id/index.html" title="The Indonesian version of iojs.org">main website</a>.</p>
+    <div class="item projects-item">
+      <div class="item-header row">
+        <div class="main">
+          <h3 class="title">io.js Indonesian Localization Team Member</h3>
+          <a href="http://github.com/iojs/iojs-id" class="link">http://github.com/iojs/iojs-id</a>
+        </div>
+        <div class="side">2015 — now</div>
+      </div>
+      <p class="details">Pushed and maintained a majority of the weekly updates as well as involved in the translation of the evangelism items and the main website.</p>
     </div>
-    <div class="projects-item">
-      <h3 class="title">Shelves</h3>
-      <a href="http://github.com/diagramatics/shelves" class="link">http://github.com/diagramatics/shelves</a>
-      <p class="details">A college assignment submission, designed and developed an e-commerce website using PHP and with no other major frameworks other than jQuery. Incorporated Sass for better CSS, JavaScript object-oriented declarations and Vagrant for development environment use.</p>
+    <div class="item projects-item">
+      <div class="item-header row">
+        <div class="main">
+          <h3 class="title">Shelves</h3>
+          <a href="http://github.com/diagramatics/shelves" class="link">http://github.com/diagramatics/shelves</a>
+        </div>
+        <div class="side"></div>
+      </div>
+      <p class="details">Designed and developed an e-commerce website for college assignments using PHP and with no other major frameworks other than jQuery. Used Sass, object-oriented JavaScript and Vagrant.</p>
     </div>
 
-    <p class="details">More projects and experiments can be found over my <a href="http://github.com/diagramatics">GitHub</a> and <a href="http://codepen.io/diagramatics">CodePen</a> account.</p>
+    <div class="item projects-item">
+      <div class="item-header row">
+        <div class="main">
+          <h3 class="title">domain.com.au Homepage UI Redesign Analysis</h3>
+          <a href="http://github.com/diagramatics/shelves" class="link">http://projects.diagramatics.me/fairfax-domain-analysis</a>
+        </div>
+        <div class="side"></div>
+      </div>
+      <p class="details">
+        An analysis towards the 2014 release of domain.com.au's homepage, comparing it towards the old version. A part of my application for a UI Developer position in Fairfax Media.
+      </p>
+    </div>
+
+    <p class="extra">More projects and experiments can be found over my <a href="http://github.com/diagramatics">GitHub</a> and <a href="http://codepen.io/diagramatics">CodePen</a> account.</p>
   </section>
 
   <section class="education-section resume-section container">
     <h2 class="title">Education</h2>
 
-    <div class="education-item">
+    <div class="item education-item">
       <div class="item-header row">
         <h3 class="main">Academy of Information Technology</h3>
         <div class="side"></div>
@@ -141,7 +165,7 @@
     </div>
   </section>
 
-  <footer class="resume-footer">
+  <footer id="resumeFooter" class="resume-footer">
     <div class="title">
       <span class="caps">Résumé</span> of <span class="caps">Steven Sinatra</span>
     </div>
