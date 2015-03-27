@@ -4,7 +4,7 @@
   > .main {}
   > .side {
     font-family: $font-family-serif;
-    font-size: 2.2rem;
+    font-size: $h3-font-size-small;
     font-weight: bold;
   }
 
@@ -15,7 +15,7 @@
     }
     > .side {
       width: grid-column-width(3);
-      font-size: 2.4rem;
+      font-size: $h3-font-size;
       text-align: right;
       margin-left: 2em;
     }
@@ -34,12 +34,6 @@
         width: auto; // Override to enable flexbox properly
         margin-left: 1em;
       }
-    }
-  }
-
-  @media (#{$bp-larger-than-tablet}), only print {
-    > .side {
-      font-size: 2.8rem;
     }
   }
 }

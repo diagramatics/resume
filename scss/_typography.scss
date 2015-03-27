@@ -27,7 +27,11 @@ h2 {
 
 h3 {
   margin-bottom: 0;
-  font-size: 2.666667rem;
+  font-size: $h3-font-size-small;
+
+  @media (#{$bp-larger-than-phablet}) {
+    font-size: $h3-font-size;
+  }
 }
 
 p {
@@ -36,7 +40,7 @@ p {
 
 a {
   @include default-transition;
-  
+
   &:hover {
     color: darken($font-color, 10%);
   }
