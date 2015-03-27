@@ -1,67 +1,17 @@
-# [Skeleton-Sass](http://getskeleton.com)
-Skeleton is a simple, responsive boilerplate to kickstart any responsive project.
+# My Résumé
 
-Check out <http://getskeleton.com> for documentation and details.
+This is, literally, an online résumé. An HTML, directly printable, responsive résumé of a previous version I typed and styled in Microsoft Word.
 
-## Getting started
+Oh, and by the way, [do hire me](mailto:ohai@diagramatics.me)!
 
-### Install Global Dependancies
-  * [Node.js](http://nodejs.org)
-  * [bower](http://bower.io): `[sudo] npm install bower -g`
-  * [grunt.js](http://grunt.js); `[sudo] npm install -g grunt-cli`
+## HTML?
 
-### Install Local Dependancies
-  * Download zip or clone the repo
-  * cd to project folder
-  * run `[sudo] npm install` (first time users)
-  * run `grunt` (to watch and compile sass files)
+This résumé is made using HTML, CSS with Sass as the preprocessor and Autoprefixer to handle the pesky vendor prefixes, and slight JavaScript for more interaction.
 
-### What's in the download?
+## Printable?
 
-The download includes Skeleton's CSS, ~~Normalize CSS as a reset,~~ a sample favicon, and an index.html as a starting point.
+Of course everything is printable, but this résumé
 
-```
-skeleton/
-├── index.html
-├── scss/
-│   └── skeleton.scss
-├── images/
-│   └── favicon.png
-├── package.json
-├── Gruntfile.js
-└── README.md
+## Responsive
 
-```
-
-### Why it's awesome
-
-Skeleton is lightweight and simple. It styles only raw HTML elements (with a few exceptions) and provides a responsive grid. Nothing more.
-- Minified, it's less than a kb
-- It's a starting point, not a UI framework
-- ~~No compiling or installing...just vanilla CSS~~
-
-
-## Browser support
-
-- Chrome latest
-- Firefox latest
-- Opera latest
-- Safari latest
-- IE latest
-
-The above list is non-exhaustive. Skeleton works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE9.
-
-
-## License
-
-All parts of Skeleton are free to use and abuse under the [open-source MIT license](http://opensource.org/licenses/mit-license.php).
-
-
-## Colophon
-
-Skeleton was built using [Sublime Text 3](http://www.sublimetext.com/3) and designed with [Sketch](http://bohemiancoding.com/sketch). The typeface [Raleway](http://www.google.com/fonts/specimen/Raleway) was created by [Matt McInerney](http://matt.cc/) and [Pablo Impallari](http://www.impallari.com/). Code highlighting by Google's [Prettify library](https://code.google.com/p/google-code-prettify/). Icons in the header of the documentation are all derivative work of icons from [The Noun Project](thenounproject.com). [Feather](http://thenounproject.com/term/feather/22073) by Zach VanDeHey, [Pen](http://thenounproject.com/term/pen/21163) (with cap) by Ed Harrison, [Pen](http://thenounproject.com/term/pen/32847) (with clicker) by Matthew Hall, and [Watch](http://thenounproject.com/term/watch/48015) by Julien Deveaux.
-
-
-## Acknowledgement
-
-Skeleton was created by [Dave Gamache](https://twitter.com/dhg) for a better web.
+Unlike normal Word-made résumés, this resume is responsive so it can be printed on any paper size you can think of. The CSS `page-break-inside` helps with this a lot to prevent any page breaks between the content of each sections. The sizes of the typography is also tweaked to ensure everything fits at least in an A4 paper without any unordinary page breaks, leaving big empty gaps on the paper.
