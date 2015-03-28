@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var $ = require('gulp-load-plugins')();
@@ -6,11 +8,13 @@ gulp.task('styles', function() {
   return $.rubySass('scss/style.scss', {
       style: 'nested',
       precision: 10,
-      defaultEncoding: 'UTF-8'
+      defaultEncoding: 'UTF-8',
+      sourcemap: true
     })
     .pipe($.autoprefixer({
       browsers: ['last 2 version', 'ie 8', 'ie 9']
     }))
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.reload({
       stream: true
