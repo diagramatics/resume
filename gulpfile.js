@@ -3,6 +3,7 @@
 var del = require('del');
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
+var wiredep = require('wiredep').stream;
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function() {
@@ -20,6 +21,12 @@ gulp.task('styles', function() {
       stream: true
     })
   );
+});
+
+gulp.task('bower', function() {
+  gulp.src('app/index.html')
+    .pipe(wiredep({}))
+    .pipe(gulp.dest('app'));
 });
 
 gulp.task('copy', function () {
