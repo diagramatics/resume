@@ -11,13 +11,15 @@
   // Enable grid on bigger sizes than tablet
   @media (#{$bp-larger-than-phablet}) {
     > .main {
+      float: left;
       width: grid-column-width(9);
     }
     > .side {
+      float: left;
       width: grid-column-width(3);
       font-size: $h3-font-size;
       text-align: right;
-      margin-left: 2em;
+      padding-left: 2em;
     }
   }
   @media (#{$bp-larger-than-phablet}), only print {
@@ -26,11 +28,13 @@
       display: flex;
 
       > .main {
+        float: none; // Override to enable flexbox properly
         flex: 2;
         width: auto; // Override to enable flexbox properly
       }
 
       > .side {
+        float: none; // Override to enable flexbox properly
         width: auto; // Override to enable flexbox properly
         margin-left: 1em;
       }
