@@ -1,5 +1,6 @@
 'use strict';
 
+var critical = require('critical');
 var del = require('del');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
@@ -102,13 +103,27 @@ gulp.task('html', function() {
     .pipe($.size({title: 'html'}));
 });
 
+gulp.task('critical', function() {
+  // TODO: Is this actually working properly? It results in inlining all of the CSS
+  critical.inline({
+    base: 'dist/',
+    css: 'css/*.css',
+    src: 'index.html',
+    dest: 'index.html',
+    minify: true,
+    width: 320,
+    height: 480,
+    extract: true
+  });
+});
+
 gulp.task('dev', ['clean'], function() {
   runSequence('styles', ['wiredep', 'watch']);
   browserSync.reload();
 });
 
 gulp.task('build', ['clean', 'wiredep'], function() {
-  runSequence('styles', ['html', 'images'], function() {
+  runSequence('styles', ['html', 'images'], 'critical', function() {
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
   });
 });
