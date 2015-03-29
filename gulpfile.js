@@ -1,5 +1,6 @@
 'use strict';
 
+var del = require('del');
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var $ = require('gulp-load-plugins')();
@@ -30,8 +31,16 @@ gulp.task('watch', function() {
   });
 });
 
+gulp.task('clean', del.bind(null, ['dist/*', '!dist/.git'], {dot: true}));
+
 gulp.task('dev', ['styles', 'watch'], function() {
   gulp.watch('scss/**/*.scss', ['styles']);
   gulp.watch('index.html', browserSync.reload);
   browserSync.reload();
 });
+
+gulp.task('build', [], function() {
+
+});
+
+gulp.task('default', ['build']);
