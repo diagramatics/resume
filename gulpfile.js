@@ -97,7 +97,12 @@ gulp.task('html', function() {
     .pipe($.useref())
 		.pipe($.revReplace())
     // Minify HTML
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    .pipe($.if('*.html', $.htmlmin({
+      removeComments: true,
+      collapseWhitespace: true,
+      conservativeCollapse: true,
+      useShortDoctype: true
+    })))
     // Output files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));
