@@ -4,8 +4,9 @@
     "node": ">=0.12.0"
   },
   "devDependencies": {
+    "bower": "^1.8.2",
     "browser-sync": "^2.4.0",
-    "critical": "git://github.com:diagramatics/critical.git",
+    "critical": "^1.2.1",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
@@ -21,9 +22,11 @@
     "gulp-size": "^1.2.1",
     "gulp-sourcemaps": "^1.5.1",
     "gulp-uglify": "^1.1.0",
-    "gulp-uncss": "^1.0.1",
     "gulp-useref": "^1.1.1",
     "run-sequence": "^1.0.2",
     "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "inline-critical": "^4.0.2"
   }
 }

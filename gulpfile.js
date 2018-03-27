@@ -1,11 +1,10 @@
 'use strict';
 
-var critical = require('critical');
+var inlineCritical = require('inline-critical');
 var del = require('del');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
-var wiredep = require('wiredep').stream;
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function() {
@@ -26,15 +25,6 @@ gulp.task('styles', function() {
   );
 });
 
-gulp.task('wiredep', function() {
-  return gulp.src('app/index.html')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./,
-      exclude: ['bower_components/modernizr/modernizr.js'],
-    }))
-    .pipe(gulp.dest('app'));
-});
-
 gulp.task('copy', function () {
   return gulp.src(['app/images'], {
     dot: true
@@ -46,12 +36,8 @@ gulp.task('watch', function() {
   browserSync({
     notify: false,
     server: ['.tmp', 'app'],
-    routes: {
-      '/bower_components': 'bower_components'
-    }
   });
   gulp.watch('app/scss/**/*.scss', ['styles']);
-  gulp.watch('bower.json', ['wiredep']);
   gulp.watch([
     'app/index.html',
     'images/**/*.**'
@@ -82,9 +68,9 @@ gulp.task('html', function() {
   return gulp.src('app/index.html')
     .pipe(assets)
     // Concatenate and minify JavaScript files
-    .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
+    // .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
     // Remove unused styles
-    // TODO: Disabled now since it doesn't work well with Modernizr's classes
+    // TODO: Disabled now for later tech debt.
     // .pipe($.if('*.css', $.uncss({
     //   html: [
     //     'app/index.html'
@@ -108,27 +94,27 @@ gulp.task('html', function() {
     .pipe($.size({title: 'html'}));
 });
 
-gulp.task('critical', function() {
-  // TODO: Is this actually working properly? It results in inlining all of the CSS
-  critical.inline({
-    base: 'dist/',
-    css: 'css/*.css',
-    src: 'index.html',
-    dest: 'index.html',
-    minify: true,
-    width: 320,
-    height: 480,
-    extract: true
-  });
-});
+// gulp.task('critical', function() {
+//   // TODO: Is this actually working properly? It results in inlining all of the CSS
+//   inlineCritical({
+//     base: 'dist/',
+//     css: 'css/*.css',
+//     src: 'index.html',
+//     dest: 'index.html',
+//     minify: true,
+//     width: 320,
+//     height: 480,
+//     extract: true
+//   });
+// });
 
 gulp.task('dev', ['clean'], function() {
-  runSequence('styles', ['wiredep', 'watch']);
+  runSequence('styles', 'watch');
   browserSync.reload();
 });
 
-gulp.task('build', ['clean', 'wiredep'], function() {
-  runSequence('styles', ['html', 'images'], 'critical', function() {
+gulp.task('build', ['clean'], function() {
+  runSequence('styles', ['html', 'images'], function() {
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
   });
 });

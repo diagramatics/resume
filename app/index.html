@@ -31,13 +31,6 @@
   <!-- Normally we put favicon for Apple and Windows tiles too, but since the
        resume is not a webapp, don't then -->
 
-
-  <!-- Modernizr
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- build:js js/modernizr.js -->
-  <script src="bower_components/modernizr/modernizr.js"></script>
-  <!-- endbuild -->
-
 </head>
 <body>
 
@@ -68,92 +61,128 @@
     <h1 class="title">Steven Sinatra</h1>
     <div class="contact-row row">
       <div class="text"><a href="tel:+61416640528" title="Phone Number">+61 416 640 528</a></div>
-      <div class="text"><a href="mailto:ohai@diagramatics.me" title="Email">ohai@diagramatics.me</a></div>
+      <div class="text"><a href="mailto:steven@stevensinatra.id" title="Email">steven@stevensinatra.id</a></div>
     </div>
   </header>
 
   <section class="abilities-section resume-section container">
-    <h2 class="title">Abilities & Know Hows</h2>
+    <h2 class="title">Technical Experience</h2>
     <ul class="list">
-      <li>HTML and CSS (with Sass)</li>
-      <li>Bootstrap</li>
-      <li>JavaScript, jQuery and CoffeeScript</li>
-      <li>UX/UI knowledge</li>
+      <li>HTML, with knowledge of semantic HTML</li>
+      <li>CSS, Sass and LESS, and CSS-in-JS libraries</li>
+      <li>JS with working TypeScript knowledge</li>
+      <li>React/Preact, componentisation</li>
+      <li>Redux-like single state management</li>
+      <li>Working experience of Angular and RxJS</li>
+      <li>Limited experience of Vue</li>
+      <li>UX/UI knowledge, with growth mindset</li>
       <li>Working knowledge of SQL and PHP</li>
-      <li>Front-end workflow tools (Grunt, Gulp, Vagrant)</li>
+      <li>Limited knowledge of GraphQL</li>
+      <li>Front-end tooling (Webpack, Rollup)</li>
       <li>Adobe Photoshop and Illustrator</li>
-      <li>Git, GitHub, and Bitbucket</li>
     </ul>
-    <p class="extra">Also currently sharpening up on Angular, Polymer, React, and Android development.</p>
   </section>
 
   <section class="experience-section resume-section container">
-    <h2 class="title">Experience</h2>
+    <h2 class="title">Commercial Experience</h2>
     <div class="item experience-item">
       <div class="item-header row">
         <div class="main">
-          <h3 class="company">Lightdiv Designs</h3>
-          <p class="position">Lead Front-end Web Developer</p>
+          <h3 class="company">Freelancer.com</h3>
+          <p class="position">Front-end Engineer, Infrastructure</p>
         </div>
-        <div class="side">2013 — 2014</div>
+        <div class="side">2015—current</div>
       </div>
       <ul class="achievements">
-        <li>Created a more modern and novel UI and friendlier user interactions of one of the clients, a popular local newspaper company’s website in Medan, North Sumatra, Indonesia.</li>
-      </ul>
-    </div>
-    <div class="item experience-item">
-      <div class="item-header row">
-        <div class="main">
-          <h3 class="company">HeartIndo</h3>
-          <p class="position">Internship on Web Design and Content Writing</p>
-        </div>
-        <div class="side">2012</div>
-      </div>
-      <ul class="achievements">
-        <li>Created a new look of <a href="http://www.heartindo.com">the website</a> limited in Google Sites in the timespan of two weeks. Current website look may have been altered.</li>
-        <li>Translated and rewritten all content in English.</li>
+        <li>
+          Spearheaded the movement to a front-end build system using Gulp (at the time)
+          to precompile LESS files to CSS on build time rather than on runtime in the
+          browser as a development workflow.
+        </li>
+        <li>
+          Improved standardisation and consistency of CSS-based UI components.
+        </li>
+        <li>
+          Aided in the development of modular JS infrastructure with
+          SystemJS and jspm in personal time with just two people.
+        </li>
+        <li>
+          Delivered performance focused culture, analysed and improved the
+          load time of landing pages, whilst simultaneously collaborated on
+          design and development of new landing pages.
+        </li>
+        <li>
+          Involved in the rollout of Angular to the company front-end infrastructure,
+          migrating sitewide components to the new framework, and made initial
+          development work of the UI components implementation.
+        </li>
       </ul>
     </div>
   </section>
 
   <section class="projects-section resume-section container">
     <h2 class="title">Projects & Other Involvement</h2>
+    <div class="item projects-item">
+      <div class="item-header row">
+        <div class="main">
+          <h3 class="title">“Hacking Fast in a Hackathon” article</h3>
+          <a href="https://hackernoon.com/hacking-fast-in-a-hackathon-94d5dbca657" class="link">https://hackernoon.com/hacking-fast-in-a-hackathon-94d5dbca657</a>
+        </div>
+        <div class="side"></div>
+      </div>
+      <p class="details">
+        Written an article about succeeding in a hackathon and lessons learnt
+        from doing it.
+      </p>
+    </div>
 
     <div class="item projects-item">
       <div class="item-header row">
         <div class="main">
-          <h3 class="title">io.js Indonesian Localization Team Member</h3>
-          <a href="http://github.com/iojs/iojs-id" class="link">http://github.com/iojs/iojs-id</a>
+          <h3 class="title">BTCMarkets Ticker</h3>
+          <a href="https://github.com/diagramatics/btcmarkets-ticker" class="link">https://github.com/diagramatics/btcmarkets-ticker</a>
         </div>
-        <div class="side">2015 — now</div>
+        <div class="side"></div>
       </div>
-      <p class="details">Pushed and maintained a majority of the weekly updates as well as involved in the translation of the evangelism items and the main website.</p>
+      <p class="details">
+        Maintained a simple real time ticker of cryptocurrency
+        prices from BTCMarkets. Written in Preact with a simple CORS proxy with micro.
+      </p>
     </div>
     <div class="item projects-item">
       <div class="item-header row">
         <div class="main">
-          <h3 class="title">Shelves</h3>
-          <a href="http://github.com/diagramatics/shelves" class="link">http://github.com/diagramatics/shelves</a>
+          <h3 class="title">Whose Turn Is It</h3>
+          <a href="#" class="link">Currently private</a>
         </div>
         <div class="side"></div>
       </div>
-      <p class="details">Designed and developed an e-commerce website for college assignments with PHP and only jQuery as a major framework. Used Sass, object-oriented JavaScript and Vagrant.</p>
+      <p class="details">
+        A simple app used internally with a couple of friends
+        to track whose turn is it to order coffee. Written in Preact, GraphQL
+        and styled-components.
+      </p>
     </div>
 
     <div class="item projects-item">
       <div class="item-header row">
         <div class="main">
           <h3 class="title">domain.com.au Homepage UI Redesign Analysis</h3>
-          <a href="http://github.com/diagramatics/shelves" class="link">http://projects.diagramatics.me/fairfax-domain-analysis</a>
+          <a href="http://projects.diagramatics.me/fairfax-domain-analysis" class="link">http://projects.diagramatics.me/fairfax-domain-analysis</a>
         </div>
         <div class="side"></div>
       </div>
       <p class="details">
-        An analysis towards the 2014 release of domain.com.au's homepage, comparing it towards the old version. A part of my application for a UI Developer position in Fairfax Media.
+        An analysis towards the 2014 release of domain.com.au's homepage, comparing it towards the old version. A part of my application for a UI Developer position in Fairfax Media
+        back in 2014.
       </p>
     </div>
 
-    <p class="extra">More projects and experiments can be found over my <a href="http://github.com/diagramatics">GitHub</a> and <a href="http://codepen.io/diagramatics">CodePen</a> account.</p>
+    <p class="extra">
+      More projects and experiments can be found over my
+      <a href="http://github.com/diagramatics">GitHub</a> and
+      <a href="http://codepen.io/diagramatics">CodePen</a> account.
+    </p>
   </section>
 
   <section class="education-section resume-section container">
@@ -167,9 +196,8 @@
       <ul>
         <li>
           <strong>Diploma of Software Development</strong>, 2013 — 2014
-          <p>Graduated with an overall grade of 80.22 and an Outstanding Academic Achievement Award</p>
         </li>
-        <li><strong>Bachelor of IT (Mobile Application Development)</strong>, 2014 — 2016 (expected)</li>
+        <li><strong>Bachelor of IT (Mobile Application Development)</strong>, 2014 — 2015</li>
       </ul>
     </div>
   </section>
@@ -210,8 +238,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- build:js js/main.js -->
   <script src="js/main.js"></script>
-  <!-- bower:js -->
-  <!-- endbower -->
   <!-- endbuild -->
 
   <script>

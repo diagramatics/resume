@@ -23,21 +23,18 @@
     }
   }
   @media (#{$bp-larger-than-phablet}), only print {
-    // Use Modernizr CSS class toggles to detect flexbox support
-    .flexbox & {
-      display: flex;
+    display: flex;
 
-      > .main {
-        float: none; // Override to enable flexbox properly
-        flex: 2;
-        width: auto; // Override to enable flexbox properly
-      }
+    > .main {
+      float: none; // Override to enable flexbox properly
+      flex: 2;
+      width: auto; // Override to enable flexbox properly
+    }
 
-      > .side {
-        float: none; // Override to enable flexbox properly
-        width: auto; // Override to enable flexbox properly
-        margin-left: 1em;
-      }
+    > .side {
+      float: none; // Override to enable flexbox properly
+      width: auto; // Override to enable flexbox properly
+      margin-left: 1em;
     }
   }
 }
