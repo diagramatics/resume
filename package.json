@@ -1,17 +1,18 @@
 {
   "private": true,
-  "engine": {
-    "node": ">=12"
+  "engines": {
+    "node": "12.x"
   },
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "now-build": "yarn build"
+    "deploy": "yarn build && now dist"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "now": "^16.7.3",
     "parcel": "^2.0.0-alpha.3.2",
     "prettier": "^1.19.1",
     "sass": "^1.24.4"

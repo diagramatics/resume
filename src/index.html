@@ -6,8 +6,8 @@
   <meta name="description" content="A résumé of Steven Sinatra. Front end engineer, Indonesian living in Sydney.">
   <meta name="author" content="Steven Sinatra">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Rubik:400,500,400i&display=swap' rel='stylesheet' type='text/css'>
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.scss">
   <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32">
@@ -165,15 +165,14 @@
   </footer>
 
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 
+    ga('set', 'transport', 'beacon');
     ga('create', 'UA-46466664-4', 'auto');
     ga('send', 'pageview');
-
   </script>
+  <script defer src="https://www.google-analytics.com/analytics.js"></script>
+  <!-- This script is unused. -->
   <script defer src="./scripts/index.js"></script>
 </body>
 </html>
