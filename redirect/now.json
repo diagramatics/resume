@@ -1,0 +1,15 @@
+{
+  "name": "cv.stevensinatra.id/redirect",
+  "version": 2,
+  "alias": ["cv.diagramatics.me"],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": {
+        "Location": "https://cv.stevensinatra.id/$1"
+      }
+    }
+  ]
+
+}
