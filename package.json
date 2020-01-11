@@ -17,5 +17,6 @@
     "prettier": "^1.19.1",
     "sass": "^1.24.4"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.1.0"
 }
