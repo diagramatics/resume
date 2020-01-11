@@ -1,6 +1,4 @@
 .abilities-section {
-  > .title {}
-
   > .list {
     columns: $abilities-column-width $abilities-column-count;
     column-gap: $abilities-column-gap;

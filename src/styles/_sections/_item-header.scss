@@ -3,9 +3,9 @@
 
   > .main {}
   > .side {
-    font-family: $font-family-serif;
+    font-family: $font-family-sans;
     font-size: $h3-font-size-small;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   // Enable grid on bigger sizes than tablet

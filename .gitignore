@@ -1,5 +1,4 @@
-.tmp
 node_modules
-.sass-cache
+.parcel-cache
 dist
 yarn-error.log
