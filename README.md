@@ -1,8 +1,6 @@
 # My Résumé
 
-This is, literally, an online résumé. An HTML, directly printable, responsive résumé of a previous version I typed and styled in Microsoft Word.
-
-Oh, and by the way, [do hire me](mailto:ohai@diagramatics.me)!
+This is, literally, an online résumé. An HTML, directly printable, responsive résumé.
 
 ## HTML?
 
