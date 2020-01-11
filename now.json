@@ -1,5 +1,8 @@
 {
   "name": "cv.stevensinatra.id",
-  "type": "static",
-  "alias": ["cv.diagramatics.me"]
+  "version": 2,
+  "alias": ["cv.diagramatics.me"],
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ]
 }

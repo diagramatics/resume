@@ -5,7 +5,8 @@
   },
   "scripts": {
     "build": "gulp build",
-    "deploy": "npm run build && cp ./now.json ./dist && cd dist && now && now alias"
+    "now-build": "gulp build",
+    "deploy": "now && now alias"
   },
   "devDependencies": {
     "bower": "^1.8.2",
