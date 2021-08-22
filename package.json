@@ -1,22 +1,19 @@
 {
   "private": true,
+  "version": "1.1.0",
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "deploy": "yarn build && now dist"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "now": "^16.7.3",
-    "parcel": "^2.0.0-alpha.3.2",
     "prettier": "^1.19.1",
-    "sass": "^1.24.4"
-  },
-  "dependencies": {},
-  "version": "1.1.0"
+    "astro": "^0.19.1"
+  }
 }

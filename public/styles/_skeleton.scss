@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -52,7 +54,7 @@ $container-width: 960px !default;
 $container-width-larger-than-mobile: 85% !default;
 $container-width-larger-than-phablet: 80% !default;
 $total-columns: 12 !default;
-$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-width: math.div(100, $total-columns) !default; // calculates individual column width based off of # of columns
 $column-margin: 4% !default; // space between columns
 
 // Misc
@@ -60,7 +62,7 @@ $global-radius: 4px !default;
 
 // Functions
 @function grid-column-width($n) {
-  @return $column-width * $n - ($column-margin*($total-columns - $n)/$total-columns);
+  @return $column-width * $n - math.div($column-margin*($total-columns - $n), $total-columns);
 }
 
 @function grid-offset-length($n) {
