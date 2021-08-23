@@ -1,0 +1,30 @@
+<style lang="scss">
+  @use "../../public/styles/variables";
+
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: variables.$container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    // For devices larger than 400px
+    @media (#{variables.$bp-larger-than-mobile}) {
+      width: variables.$container-width-larger-than-mobile;
+      padding: 0;
+    }
+
+    // For devices larger than 550px
+    @media (#{variables.$bp-larger-than-phablet}) {
+      width: variables.$container-width-larger-than-phablet;
+    }
+
+    @media only print {
+      width: 100%;
+      padding: 0;
+    }
+  }
+</style>
+<div class="container">
+  <slot />
+</div>

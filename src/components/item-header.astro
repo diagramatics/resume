@@ -1,0 +1,58 @@
+---
+const { small = false } = Astro.props;
+---
+<style lang="scss">
+  @use "../../public/styles/variables";
+
+  .item-header {
+    margin: .6em 0;
+
+    @media (#{variables.$bp-larger-than-phablet}), only print {
+      display: flex;
+    }
+  }
+
+  .main {
+    // Enable grid on bigger sizes than tablet
+    @media (#{variables.$bp-larger-than-phablet}) {
+      float: left;
+      width: grid-column-width(9);
+    }
+
+    @media (#{variables.$bp-larger-than-phablet}), only print {
+      float: none; // Override to enable flexbox properly
+      flex: 2;
+      width: auto; // Override to enable flexbox properly
+    }
+  }
+
+  .side {
+    font-family: variables.$font-family-sans;
+    font-size: variables.$h3-font-size-small;
+    font-weight: 500;
+
+    @media (#{variables.$bp-larger-than-phablet}), only print {
+      float: none; // Override to enable flexbox properly
+      width: auto; // Override to enable flexbox properly
+      margin-left: 1em;
+    }
+
+    // Enable grid on bigger sizes than tablet
+    @media (#{variables.$bp-larger-than-phablet}) {
+      float: left;
+      width: grid-column-width(3);
+      font-size: variables.$h3-font-size;
+      text-align: right;
+      padding-left: 2em;
+    }
+  }
+</style>
+
+<div class="item-header">
+  <div class="main">
+    <slot name="main" />
+  </div>
+  <div class="side">
+    <slot name="side" />
+  </div>
+</div>

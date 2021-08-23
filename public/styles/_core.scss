@@ -4,9 +4,61 @@
   box-sizing: border-box;
 }
 
-.container {
-  @include print {
-    width: 100%;
-    padding: 0;
+
+// Links
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+a {
+  color: $link-color;
+  &:hover {
+    color: darken($link-color, 5%);
   }
 }
+
+// Lists
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ul {
+  list-style: circle;
+}
+
+ul {
+  padding-left: 1em;
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+// Spacing
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+// Print specific
+
+@page {
+  size: auto;
+  margin: .53in ; // Have to be inches, otherwise not working
+}
+
+@media only print {
+  p > a,
+  li > a {
+    color: currentColor;
+    &:after {
+      content: " (" attr(href) ")";
+    }
+  }
+}
+

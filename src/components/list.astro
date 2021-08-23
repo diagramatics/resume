@@ -1,0 +1,17 @@
+<style lang="scss">
+  $width: 18em;
+  $count: 2;
+  $gap: 1.5em;
+
+  .list {
+    columns: $width $count;
+    column-gap: $gap;
+    padding-left: 0;
+    // Has to be not "inside" but using CSS columns with it doesn't work so yeah
+    list-style: circle inside;
+  }
+</style>
+
+<ul class="list">
+  <slot />
+</ul>

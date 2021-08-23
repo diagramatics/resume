@@ -1,12 +1,16 @@
 html {
   font-size: 62.5%; // This becomes 10px, which will be 16px for body font-size
-  @include print {
+  @media only print {
     font-size: 7.5pt; // This, for the body font size, will equal to 12pt
   }
 }
 
 body {
   font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $font-family;
+  color: $font-color;
 }
 
 h1,
@@ -15,18 +19,32 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-sans;
   font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+
+  @media (#{$bp-larger-than-phablet}) {
+    font-size: 5rem;
+  }
 }
 
 h2 {
   font-size: 2.4rem;
+  line-height: 1.25;
   letter-spacing: 0.02em;
 }
 
 h3 {
   margin-bottom: 0;
   font-size: $h3-font-size-small;
+  line-height: 1.3;
+  letter-spacing: -.1rem;
 
   @media (#{$bp-larger-than-phablet}) {
     font-size: $h3-font-size;
@@ -34,17 +52,18 @@ h3 {
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 1.333333em;
 }
 
 a {
-  @include default-transition;
+  transition: all .2s cubic-bezier(.4,0,.2,1);
 
   &:hover {
     color: darken($font-color, 10%);
   }
 
-  @include print {
+  @media only print {
     color: $font-color;
   }
 }
