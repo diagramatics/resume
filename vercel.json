@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://stevensinatra.id/resume",
+      "permanent": true
+    }
+  ]
+}
